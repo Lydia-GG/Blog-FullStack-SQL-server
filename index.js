@@ -9,7 +9,7 @@ import cookieParser from 'cookie-parser';
 // import multer from 'multer';
 
 const app = express();
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 // const corsOptions = {
 //   origin: 'http://localhost:3000',
