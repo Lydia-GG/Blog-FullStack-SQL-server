@@ -54,5 +54,8 @@ app.use('/api', photoRoutes);
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, './client/build/index.html'));
 // });
+app.get('*', (req, res) => {
+  res.send('welcome to blog sql project');
+});
 
 app.listen(8000, () => console.log(`server is running...`));
