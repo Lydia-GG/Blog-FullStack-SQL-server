@@ -5,6 +5,7 @@ import authRoutes from './routes/auth.js';
 import photoRoutes from './routes/uploadPhoto.js';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import db from './db/db.js';
 // import path from 'path';
 // import multer from 'multer';
 
@@ -56,6 +57,15 @@ app.use('/api', photoRoutes);
 // });
 app.get('*', (req, res) => {
   res.send('welcome to blog sql project');
+});
+app.get('/post', (req, res) => {
+  const q = 'SELECT * FROM posts WHERE id=1';
+
+  db.query(q, (err, data) => {
+    if (err) return res.status(500).json(err);
+
+    return res.status(200).json(data);
+  });
 });
 
 app.listen(8000, () => console.log(`server is running...`));
