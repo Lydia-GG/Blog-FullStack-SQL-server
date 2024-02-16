@@ -55,9 +55,9 @@ app.use('/api', photoRoutes);
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, './client/build/index.html'));
 // });
-// app.get('', (req, res) => {
-//   res.send('welcome to blog sql project');
-// });
+app.get('', (req, res) => {
+  res.send('welcome to blog sql project');
+});
 app.get('', (req, res) => {
   db.query('SELECT * FROM posts WHERE id=1', (err, data) => {
     if (err) return res.status(500).json(err);
