@@ -63,7 +63,7 @@ app.get('/post', (req, res) => {
 
   db.query(q, (err, data) => {
     if (err) return res.status(500).json(err);
-
+    db.end();
     return res.status(200).json(data);
   });
 });
