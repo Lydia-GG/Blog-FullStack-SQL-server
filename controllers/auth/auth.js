@@ -88,7 +88,7 @@ export const logout = (req, res) => {
   return res.status(200).json('user has been left');
 };
 
-// forget password
+// forget passwor
 // export const ForgotPassword = (req, res) => {
 //   const { email } = req.body;
 
